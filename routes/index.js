@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/twatt', function(req, res, next) {
   oauth.get(
-       'https://api.twitter.com/1.1/search/tweets.json?q='+req.query.q,
+       'https://api.twitter.com/1.1/statuses/user_timeline.json',
         process.env.APP_TOKEN, //test user token
         process.env.APP_SECRET, //test user secret
        function (e, data, respond){
